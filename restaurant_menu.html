@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<head>    
+    <title>BN's Italian Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;         
+           
+        }
+
+        header {
+            background-color: #e4e412;
+            color: rgb(0, 0, 0);
+            padding: 10px 0;
+            text-align: center;
+        }
+        header  img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        main {
+        padding: 20px;
+        text-align: center; 
+        max-width:800px; 
+        margin: 0 auto; 
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        article {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            text-align: center;
+            
+        }
+
+        article img {
+            max-width: 100%;
+            height:200px;
+            width: 200px;
+        }
+
+        form {
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #f9f9f9;
+            display: block;
+            text-align: left;
+        }
+
+        form label {            
+            margin-bottom: 5px;
+            display: block;
+        }
+        #friesl, #soupl {
+           display: flex;
+           flex: auto;
+           position:relative;
+           left: 20px;
+        }
+
+        form input[type="number"] {
+            width: 50px;
+            position: center;
+            padding: 5px;
+            margin-bottom: 5px;
+            margin: 10px;
+        }
+
+         form textarea {
+            width: 90%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        form input[type="radio"], form input[type="checkbox"] {
+            margin-right: 5px;
+            display:flex;
+            position: absolute;
+
+            
+        }
+
+        form input[type="submit"] {
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #e4e412;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <img src="images/logo.jpg" id="header-img" alt="Restaurant Logo">
+        <h1>BN's Italian Restaurant</h1>
+        <nav>
+            <a href="#menu">Menu</a>
+            <a href="#order-form">Order Items</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+            <article>
+                <img src="images/1.jpeg" alt="Spaghetti">
+                <h3>Spaghetti Carbonara</h3>
+                <p>A classic Italian pasta dish with creamy sauce, pancetta, and Parmesan cheese. <br><i>Price - $12.99</i></p>
+            </article>
+            <article>
+                <img src="images/2.jpeg" alt="Burger">
+                <h3>Cheeseburger</h3>
+                <p>A juicy beef patty topped with cheddar cheese, lettuce, tomato, and special sauce. Served with fries.<br><i>Price - $10.99</i></p>
+            </article>
+            <article>
+                <img src="images/3.jpeg" alt="Salad">
+                <h3>Greek Salad</h3>
+                <p>Fresh mixed greens, tomatoes, cucumbers, olives, red onions, and feta cheese with Greek dressing. <br><i>Price - $8.99</i></p>
+            </article>
+        </section>
+
+        <section id="order-form">
+            <h2>Place Your Order</h2>
+            <form action="#" method="post">
+                <label for="dish"><b>Number of dishes:</b></label><br>
+                <label for="spaghetti">Spaghetti Carbonara:</label>
+                <input type="number" id="spaghetti" name="dish" min="0" value="0"><br>
+
+                <label for="burger">Cheeseburger:</label>
+                <input type="number" id="burger" name="dish" min="0" value="0">
+
+                <label for="salad">Greek Salad:</label>
+                <input type="number" id="salad" name="dish" min="0" value="0">
+
+                <label for="sides"><b>Choose a side:</b></label><br>
+                <input type="checkbox" id="fries" name="sides" value="fries">
+                <label for="fries" id="friesl">French Fries</label><br>
+                <input type="checkbox" id="soup" name="sides" value="soup">
+                <label for="soup" id="soupl">Soup of the Day</label><br><br>
+
+                <label for="special-requests"><b>Special Requests:</b></label>
+                <textarea id="special-requests" name="special-requests" rows="4"></textarea>
+
+                <input type="submit" value="Go To Checkout">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with love by @phdbahasuru77695</p>
+    </footer>
+</body>
+</html>
